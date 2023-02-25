@@ -9,7 +9,7 @@ APP = Flask(__name__)
 
 # Load the data
 MASCOTS = None
-with open('data.json', 'r', encoding="utf-8") as f
+with open('data.json', 'r', encoding="utf-8") as f:
     MASCOTS = json.load(f.read())
 
 
