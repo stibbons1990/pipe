@@ -8,7 +8,9 @@ from flask import Flask, jsonify, abort, make_response
 APP = Flask(__name__)
 
 # Load the data
-MASCOTS = json.load(open('data.json', 'r', encoding="utf-8"))
+MASCOTS = None
+with open('data.json', 'r', encoding="utf-8") as f
+    MASCOTS = json.load(f.read())
 
 
 @APP.route('/', methods=['GET'])
