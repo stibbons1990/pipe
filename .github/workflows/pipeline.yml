@@ -4,10 +4,13 @@ on: [push]
 env:
   APPLICATION_NAME: app2
 jobs:
-  lint:
+  hello:
     runs-on: ubuntu-latest
     steps:
     - uses: stibbons1990/hello@main
+  lint:
+    runs-on: ubuntu-latest
+    steps:
     - uses: actions/checkout@v1
     - name: Setup Python environment
       uses: actions/setup-python@v4
